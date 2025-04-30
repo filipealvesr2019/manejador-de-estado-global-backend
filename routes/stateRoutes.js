@@ -1,8 +1,8 @@
-import express from 'express';
-import { setState, getState } from "../controllers/stateController";
+const express = require('express');
+const { setState, getState } = require('../controllers/stateController');
 
 const router = express.Router();
 router.post('/', setState);
 router.get('/:key',  getState);
 
-export default router;
+module.exports = router;
