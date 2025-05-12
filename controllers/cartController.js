@@ -21,5 +21,6 @@ exports.addToCart = async (req, res) => {
 
 exports.getCart = async (req, res) => {
     const carrinho = await Cart.findOne().populate("produtos.produtoId");
-    
+    res.json(carrinho || { produtos: [] });
+
 }
