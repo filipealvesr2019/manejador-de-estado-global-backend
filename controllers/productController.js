@@ -1,4 +1,6 @@
  
+const Product = require("../models/Product");
+
 exports.createProduct = async (req, res) => {
     try {
         const { nome, preco, imagem } = req.body;
@@ -8,4 +10,9 @@ exports.createProduct = async (req, res) => {
     } catch(err){
         res.status(500).json({ error: err.message})
     }
+}
+
+exports.getAllProducts = async (req, res) => {
+    const produtos = await Product.find();
+    res.json(produtos);
 }
