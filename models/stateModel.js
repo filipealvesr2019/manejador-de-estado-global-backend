@@ -1,10 +1,9 @@
-import mongoose from 'mongoose';
-
+const mongoose = require("mongoose")
 const stateShema = new mongoose.Sheama({
     key: String,
     value: mongoose.Schema.Types.Mixed
 });
 
-export default mongoose.model("State", stateShema)
+module.exports =  mongoose.model("State", stateShema)
 
 
