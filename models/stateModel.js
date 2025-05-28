@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const stateShema = new mongoose.Sheama({
+const stateShema = new mongoose.Schema({
     key: String,
     value: mongoose.Schema.Types.Mixed
 });
