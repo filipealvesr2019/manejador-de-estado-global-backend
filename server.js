@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
   .catch(err => console.error("Erro ao conectar:", err));
 
 app.use("/state", stateRoutes);
-app.use("produtos", require("./routes/ProductRoutes"));
+app.use("/produtos", require("./routes/ProductRoutes"));
 app.use("/carrinho", require("./routes/cartRoutes"))
 
 app.listen(5000, () => console.log("Servidor rodando na porta 5000"));
