@@ -18,4 +18,4 @@ app.use("/state", stateRoutes);
 app.use("/produtos", require("./routes/ProductRoutes"));
 app.use("/carrinho", require("./routes/cartRoutes"))
 
-app.listen(5000, () => console.log("Servidor rodando na porta 5000"));
+app.listen(3000, () => console.log("Servidor rodando na porta 3000"));
