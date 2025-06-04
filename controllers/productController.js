@@ -1,10 +1,10 @@
- 
-const Product = require("../models/Product");
+const Produto = require("../models/Produto");
+
 
 exports.createProduct = async (req, res) => {
     try {
         const { nome, preco, imagem } = req.body;
-        const novo = new Product({ nome, preco, imagem });
+        const novo = new Produto({ nome, preco, imagem });
         await novo.save();
         res.status(200).json(novo)
     } catch(err){
@@ -13,6 +13,6 @@ exports.createProduct = async (req, res) => {
 }
 
 exports.getAllProducts = async (req, res) => {
-    const produtos = await Product.find();
+    const produtos = await Produto.find();
     res.json(produtos);
 }
